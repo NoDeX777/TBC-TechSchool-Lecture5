@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Example 2 – ფუნქციები</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-900 text-slate-200 min-h-screen p-6">
+
+  <h1 class="text-3xl font-bold text-violet-400 text-center mb-1">⚙️ ფუნქციები JavaScript-ში</h1>
+  <p class="text-slate-400 text-sm text-center mb-10">Example 2 · TBC Tech School · Lecture 5</p>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 max-w-5xl mx-auto">
+
+    <!-- Card 1 -->
+    <div class="bg-slate-800 border border-slate-700 rounded-2xl p-6">
+      <h3 class="text-violet-300 font-semibold mb-2">1. Function Declaration</h3>
+      <p class="text-slate-400 text-sm mb-3">კლასიკური გამოცხადება. შეიძლება გამოძახება გამოცხადებამდეც.</p>
+      <pre class="bg-slate-950 rounded-lg p-3 text-yellow-300 font-mono text-xs overflow-x-auto mb-3">function greet(name) {
+  return "გამარჯობა, " + name;
+}</pre>
+      <div id="r1" class="bg-slate-950 border border-slate-700 rounded-lg p-3 font-mono text-sm text-emerald-400"></div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="bg-slate-800 border border-slate-700 rounded-2xl p-6">
+      <h3 class="text-violet-300 font-semibold mb-2">2. Function Expression</h3>
+      <p class="text-slate-400 text-sm mb-3">ფუნქცია ცვლადში. გამოძახება მხოლოდ გამოცხადების შემდეგ.</p>
+      <pre class="bg-slate-950 rounded-lg p-3 text-yellow-300 font-mono text-xs overflow-x-auto mb-3">const add = function(a, b) {
+  return a + b;
+};</pre>
+      <div id="r2" class="bg-slate-950 border border-slate-700 rounded-lg p-3 font-mono text-sm text-emerald-400"></div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="bg-slate-800 border border-slate-700 rounded-2xl p-6">
+      <h3 class="text-violet-300 font-semibold mb-2">3. Arrow Function ➜</h3>
+      <p class="text-slate-400 text-sm mb-3">მოკლე, თანამედროვე სინტაქსი. ყველაზე პოპულარული.</p>
+      <pre class="bg-slate-950 rounded-lg p-3 text-yellow-300 font-mono text-xs overflow-x-auto mb-3">const multiply = (a, b) => a * b;
+const square   = n => n * n;</pre>
+      <div id="r3" class="bg-slate-950 border border-slate-700 rounded-lg p-3 font-mono text-sm text-emerald-400"></div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="bg-slate-800 border border-slate-700 rounded-2xl p-6">
+      <h3 class="text-violet-300 font-semibold mb-2">4. Default Parameters</h3>
+      <p class="text-slate-400 text-sm mb-3">თუ არგუმენტი არ გადაეცა, გამოიყენება ნაგულისხმევი მნიშვნელობა.</p>
+      <pre class="bg-slate-950 rounded-lg p-3 text-yellow-300 font-mono text-xs overflow-x-auto mb-3">function welcome(name = "სტუმარი") {
+  return "მოგესალმებით, " + name;
+}</pre>
+      <div id="r4" class="bg-slate-950 border border-slate-700 rounded-lg p-3 font-mono text-sm text-emerald-400"></div>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="bg-slate-800 border border-slate-700 rounded-2xl p-6">
+      <h3 class="text-violet-300 font-semibold mb-2">5. Callback ფუნქცია</h3>
+      <p class="text-slate-400 text-sm mb-3">ფუნქციები შეიძლება სხვა ფუნქციებს გადაეცეს არგუმენტად.</p>
+      <pre class="bg-slate-950 rounded-lg p-3 text-yellow-300 font-mono text-xs overflow-x-auto mb-3">function doMath(a, b, operation) {
+  return operation(a, b);
+}
+doMath(10, 5, add);</pre>
+      <div id="r5" class="bg-slate-950 border border-slate-700 rounded-lg p-3 font-mono text-sm text-emerald-400"></div>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="bg-slate-800 border border-slate-700 rounded-2xl p-6">
+      <h3 class="text-violet-300 font-semibold mb-2">6. Template Literals</h3>
+      <p class="text-slate-400 text-sm mb-3">სტრიქონების ჩასმა backtick-ებით და <code class="text-sky-400">${"$"}{}</code>-ით.</p>
+      <pre class="bg-slate-950 rounded-lg p-3 text-yellow-300 font-mono text-xs overflow-x-auto mb-3">const name = "ნინო";
+const age  = 17;
+`სახელი: ${"{name}"}, ასაკი: ${"{age}"}`</pre>
+      <div id="r6" class="bg-slate-950 border border-slate-700 rounded-lg p-3 font-mono text-sm text-emerald-400"></div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+

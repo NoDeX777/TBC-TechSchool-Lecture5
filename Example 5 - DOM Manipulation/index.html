@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Example 5 – DOM მანიპულაციები</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-900 text-slate-200 min-h-screen p-6">
+
+  <h1 class="text-3xl font-bold text-pink-400 text-center mb-1">🎯 DOM მანიპულაციები</h1>
+  <p class="text-slate-400 text-sm text-center mb-10">Example 5 · TBC Tech School · Lecture 5</p>
+
+  <div class="max-w-3xl mx-auto space-y-5">
+
+    <!-- DEMO 1 – ტექსტის შეცვლა -->
+    <div class="bg-slate-800 border border-slate-700 rounded-2xl p-6">
+      <h3 class="text-pink-300 font-semibold mb-1">1. ელემენტის პოვნა და ტექსტის შეცვლა</h3>
+      <p class="text-slate-400 text-sm mb-4"><code class="text-sky-400">getElementById</code>, <code class="text-sky-400">textContent</code>, <code class="text-sky-400">innerHTML</code></p>
+      <div class="bg-slate-950 border border-dashed border-slate-600 rounded-xl p-4">
+        <div id="demo1-text" class="text-xl text-yellow-300 mb-4">🌟 გამარჯობა, სამყარო!</div>
+        <div class="flex gap-2 flex-wrap">
+          <button onclick="changeText()"  class="bg-rose-600 hover:bg-rose-700 text-white text-sm font-semibold px-4 py-2 rounded-lg transition">ტექსტის შეცვლა</button>
+          <button onclick="changeHTML()"  class="bg-sky-600 hover:bg-sky-700 text-white text-sm font-semibold px-4 py-2 rounded-lg transition">HTML-ის ჩასმა</button>
+          <button onclick="resetText()"   class="bg-emerald-700 hover:bg-emerald-800 text-white text-sm font-semibold px-4 py-2 rounded-lg transition">Reset</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- DEMO 2 – სტილის შეცვლა -->
+    <div class="bg-slate-800 border border-slate-700 rounded-2xl p-6">
+      <h3 class="text-pink-300 font-semibold mb-1">2. სტილის დინამიური შეცვლა</h3>
+      <p class="text-slate-400 text-sm mb-4"><code class="text-sky-400">element.style.property</code> — CSS-ის მართვა JS-ით</p>
+      <div class="bg-slate-950 border border-dashed border-slate-600 rounded-xl p-4">
+        <div id="demo2-box" class="w-28 h-28 bg-indigo-500 rounded-xl flex items-center justify-center text-4xl mb-4 transition-all duration-300">🎨</div>
+        <div class="flex gap-2 flex-wrap">
+          <button onclick="makeRed()"   class="bg-rose-600 hover:bg-rose-700 text-white text-sm font-semibold px-4 py-2 rounded-lg transition">წითელი</button>
+          <button onclick="makeRound()" class="bg-sky-600 hover:bg-sky-700 text-white text-sm font-semibold px-4 py-2 rounded-lg transition">მრგვალი</button>
+          <button onclick="makeBig()"   class="bg-emerald-700 hover:bg-emerald-800 text-white text-sm font-semibold px-4 py-2 rounded-lg transition">დიდი</button>
+          <button onclick="resetBox()"  class="bg-slate-600 hover:bg-slate-700 text-white text-sm font-semibold px-4 py-2 rounded-lg transition">Reset</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- DEMO 3 – ელემენტების დამატება -->
+    <div class="bg-slate-800 border border-slate-700 rounded-2xl p-6">
+      <h3 class="text-pink-300 font-semibold mb-1">3. ელემენტების დამატება და წაშლა</h3>
+      <p class="text-slate-400 text-sm mb-4"><code class="text-sky-400">createElement</code>, <code class="text-sky-400">appendChild</code>, <code class="text-sky-400">remove()</code></p>
+      <div class="bg-slate-950 border border-dashed border-slate-600 rounded-xl p-4">
+        <ul id="demo3-list" class="space-y-2 mb-4"></ul>
+        <button onclick="addItem()" class="bg-emerald-700 hover:bg-emerald-800 text-white text-sm font-semibold px-4 py-2 rounded-lg transition">➕ ელემენტის დამატება</button>
+      </div>
+    </div>
+
+    <!-- DEMO 4 – classList -->
+    <div class="bg-slate-800 border border-slate-700 rounded-2xl p-6">
+      <h3 class="text-pink-300 font-semibold mb-1">4. CSS კლასების Toggle</h3>
+      <p class="text-slate-400 text-sm mb-4"><code class="text-sky-400">classList.toggle()</code></p>
+      <div class="bg-slate-950 border border-dashed border-slate-600 rounded-xl p-4">
+        <div id="demo4-card" class="p-5 rounded-xl border-2 border-slate-600 bg-slate-800 mb-4 transition-all duration-300">
+          👀 დააჭირე ღილაკს ჩემი სტილის შესაცვლელად!
+        </div>
+        <button onclick="toggleHighlight()" class="bg-yellow-600 hover:bg-yellow-700 text-white text-sm font-semibold px-4 py-2 rounded-lg transition">🌟 Highlight Toggle</button>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+

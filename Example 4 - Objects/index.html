@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Example 4 – ობიექტები</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-900 text-slate-200 min-h-screen p-6">
+
+  <h1 class="text-3xl font-bold text-emerald-400 text-center mb-1">🗃️ ობიექტები JavaScript-ში</h1>
+  <p class="text-slate-400 text-sm text-center mb-10">Example 4 · TBC Tech School · Lecture 5</p>
+
+  <div class="max-w-3xl mx-auto space-y-5">
+
+    <!-- 1 -->
+    <div class="bg-slate-800 border border-slate-700 rounded-2xl p-6">
+      <h3 class="text-emerald-300 font-semibold mb-2">1. ობიექტის შექმნა</h3>
+      <p class="text-slate-400 text-sm mb-3">ობიექტი — key:value წყვილების კოლექცია. აღწერს "რამეს" მისი თვისებებით.</p>
+      <pre class="bg-slate-950 rounded-lg p-3 text-yellow-300 font-mono text-xs overflow-x-auto mb-3">const student = {
+  name:     "ანა ბერიძე",
+  age:      17,
+  school:   "TBC Tech School",
+  isActive: true
+};</pre>
+      <div id="r1" class="bg-slate-950 border border-slate-700 rounded-lg p-3 font-mono text-sm text-emerald-400 whitespace-pre-wrap"></div>
+    </div>
+
+    <!-- 2 -->
+    <div class="bg-slate-800 border border-slate-700 rounded-2xl p-6">
+      <h3 class="text-emerald-300 font-semibold mb-2">2. Properties-ზე წვდომა</h3>
+      <p class="text-slate-400 text-sm mb-3">dot notation ან bracket notation. პროპერტის შეცვლა და დამატება.</p>
+      <pre class="bg-slate-950 rounded-lg p-3 text-yellow-300 font-mono text-xs overflow-x-auto mb-3">student.name        // dot notation
+student["age"]      // bracket notation
+student.age  = 18;  // შეცვლა
+student.city = "თბილისი"; // ახლის დამატება</pre>
+      <div id="r2" class="bg-slate-950 border border-slate-700 rounded-lg p-3 font-mono text-sm text-emerald-400 whitespace-pre-wrap"></div>
+    </div>
+
+    <!-- 3 -->
+    <div class="bg-slate-800 border border-slate-700 rounded-2xl p-6">
+      <h3 class="text-emerald-300 font-semibold mb-2">3. მეთოდები ობიექტში</h3>
+      <p class="text-slate-400 text-sm mb-3">ობიექტი შეიძლება შეიცავდეს ფუნქციებსაც — მეთოდები.</p>
+      <pre class="bg-slate-950 rounded-lg p-3 text-yellow-300 font-mono text-xs overflow-x-auto mb-3">const calculator = {
+  value: 0,
+  add(n)      { this.value += n; return this; },
+  subtract(n) { this.value -= n; return this; },
+  result()    { return this.value; }
+};
+calculator.add(10).add(5).subtract(3).result(); // 12</pre>
+      <div id="r3" class="bg-slate-950 border border-slate-700 rounded-lg p-3 font-mono text-sm text-emerald-400 whitespace-pre-wrap"></div>
+    </div>
+
+    <!-- 4 -->
+    <div class="bg-slate-800 border border-slate-700 rounded-2xl p-6">
+      <h3 class="text-emerald-300 font-semibold mb-2">4. Object Destructuring</h3>
+      <p class="text-slate-400 text-sm mb-3">თვისებების ამოღება ახალ ცვლადებში სწრაფად.</p>
+      <pre class="bg-slate-950 rounded-lg p-3 text-yellow-300 font-mono text-xs overflow-x-auto mb-3">const { name, age, school } = student;
+console.log(name);   // "ანა ბერიძე"
+console.log(age);    // 18</pre>
+      <div id="r4" class="bg-slate-950 border border-slate-700 rounded-lg p-3 font-mono text-sm text-emerald-400 whitespace-pre-wrap"></div>
+    </div>
+
+    <!-- 5 – team cards rendered by JS -->
+    <div class="bg-slate-800 border border-slate-700 rounded-2xl p-6">
+      <h3 class="text-emerald-300 font-semibold mb-2">5. ობიექტების მასივი</h3>
+      <p class="text-slate-400 text-sm mb-3">რეალურ პრაქტიკაში მონაცემები ხშირად ობიექტების მასივია (API-დანაც ასე მოდის!).</p>
+      <pre class="bg-slate-950 rounded-lg p-3 text-yellow-300 font-mono text-xs overflow-x-auto mb-4">const team = [
+  { name: "გიორგი", role: "Frontend", emoji: "💻" },
+  { name: "ნინო",   role: "Backend",  emoji: "⚙️" },
+  { name: "დავით",  role: "Design",   emoji: "🎨" }
+];
+team.forEach(member => { ... });</pre>
+      <div id="r5" class="space-y-3"></div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+

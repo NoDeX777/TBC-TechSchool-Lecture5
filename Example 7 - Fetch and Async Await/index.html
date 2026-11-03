@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Example 7 – Fetch & Async/Await</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-900 text-slate-200 min-h-screen p-6">
+
+  <h1 class="text-3xl font-bold text-indigo-400 text-center mb-1">⚡ Fetch & Async/Await</h1>
+  <p class="text-slate-400 text-sm text-center mb-10">Example 7 · TBC Tech School · Lecture 5</p>
+
+  <div class="max-w-3xl mx-auto space-y-5">
+
+    <!-- CONCEPT -->
+    <div class="bg-slate-800 border border-slate-700 rounded-2xl p-6">
+      <h3 class="text-indigo-300 font-semibold mb-2">🧠 კონცეფცია: ასინქრონული JavaScript</h3>
+      <p class="text-slate-400 text-sm mb-4">
+        JavaScript ერთ ნაკადიანია. <strong class="text-white">async/await</strong> გვაძლევს საშუალებას
+        "დაველოდოთ" სერვერის პასუხს გვერდის "გაყინვის" გარეშე.
+      </p>
+      <pre class="bg-slate-950 rounded-xl p-4 text-yellow-300 font-mono text-xs overflow-x-auto leading-relaxed"><span class="text-slate-500">// 1. fetch() → Promise-ს აბრუნებს</span>
+<span class="text-slate-500">// 2. await → ელოდება Promise-ის დასრულებას</span>
+<span class="text-slate-500">// 3. async → ფუნქცია რომელიც await-ს შეიცავს</span>
+
+async function getData() {
+  const response = await fetch("https://api.example.com/data");
+  const data     = await response.json();
+  console.log(data);
+}</pre>
+    </div>
+
+    <!-- DEMO 1 – Single post -->
+    <div class="bg-slate-800 border border-slate-700 rounded-2xl p-6">
+      <h3 class="text-indigo-300 font-semibold mb-1">1. ერთი პოსტის წამოღება</h3>
+      <p class="text-slate-400 text-sm mb-4">JSONPlaceholder API-დან ერთი პოსტის fetch-ი.</p>
+      <button id="btn1" onclick="fetchOnePost()"
+        class="bg-indigo-600 hover:bg-indigo-700 disabled:bg-slate-700 disabled:cursor-not-allowed text-white font-semibold px-5 py-2 rounded-xl transition mb-4">
+        📡 fetch("/posts/1")
+      </button>
+      <!-- Step indicators -->
+      <div class="flex gap-2 flex-wrap mb-4">
+        <span id="s1-1" class="text-xs px-3 py-1 rounded-full bg-slate-700 text-slate-400">1. fetch() გაგზავნა</span>
+        <span id="s1-2" class="text-xs px-3 py-1 rounded-full bg-slate-700 text-slate-400">2. response მიღება</span>
+        <span id="s1-3" class="text-xs px-3 py-1 rounded-full bg-slate-700 text-slate-400">3. JSON პარსინგი</span>
+        <span id="s1-4" class="text-xs px-3 py-1 rounded-full bg-slate-700 text-slate-400">4. DOM განახლება</span>
+      </div>
+      <div id="out1" class="bg-slate-950 border border-slate-700 rounded-xl p-4 text-sm text-slate-500">ᐅ დააჭირე ღილაკს...</div>
+    </div>
+
+    <!-- DEMO 2 – Multiple posts -->
+    <div class="bg-slate-800 border border-slate-700 rounded-2xl p-6">
+      <h3 class="text-indigo-300 font-semibold mb-1">2. მრავალი პოსტის წამოღება</h3>
+      <p class="text-slate-400 text-sm mb-4">5 პოსტის წამოღება და სიის გენერაცია.</p>
+      <button id="btn2" onclick="fetchPosts()"
+        class="bg-indigo-600 hover:bg-indigo-700 disabled:bg-slate-700 disabled:cursor-not-allowed text-white font-semibold px-5 py-2 rounded-xl transition mb-4">
+        📋 fetch("/posts?_limit=5")
+      </button>
+      <div id="out2" class="bg-slate-950 border border-slate-700 rounded-xl p-4 text-sm text-slate-500">ᐅ დააჭირე ღილაკს...</div>
+    </div>
+
+    <!-- DEMO 3 – try/catch -->
+    <div class="bg-slate-800 border border-slate-700 rounded-2xl p-6">
+      <h3 class="text-indigo-300 font-semibold mb-1">3. try / catch — შეცდომების დამუშავება</h3>
+      <p class="text-slate-400 text-sm mb-4">ყოველთვის გამოიყენე try/catch! ინტერნეტი ყოველთვის არ მუშაობს 🙂</p>
+      <pre class="bg-slate-950 rounded-xl p-4 text-yellow-300 font-mono text-xs overflow-x-auto mb-4 leading-relaxed">async function safeDataFetch() {
+  <strong>try</strong> {
+    const res  = await fetch(url);
+    const data = await res.json();
+    console.log(data);
+  } <strong>catch</strong> (error) {
+    console.error("შეცდომა:", error.message);
+  }
+}</pre>
+      <div class="flex gap-2 flex-wrap mb-4">
+        <button onclick="fetchWithError()"   class="bg-rose-700 hover:bg-rose-800 text-white font-semibold px-4 py-2 rounded-xl transition">⚠️ შეცდომის სიმულაცია</button>
+        <button onclick="fetchWithSuccess()" class="bg-emerald-700 hover:bg-emerald-800 text-white font-semibold px-4 py-2 rounded-xl transition">✅ წარმატებული fetch</button>
+      </div>
+      <div id="out3" class="bg-slate-950 border border-slate-700 rounded-xl p-4 text-sm text-slate-500">ᐅ ერთ-ერთ ღილაკს დააჭირე...</div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+

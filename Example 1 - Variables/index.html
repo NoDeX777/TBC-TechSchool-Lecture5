@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Example 1 – ცვლადები</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-900 text-slate-200 min-h-screen flex items-center justify-center p-6">
+
+  <div class="w-full max-w-xl">
+
+    <h1 class="text-3xl font-bold text-sky-400 mb-1">📦 ცვლადები JavaScript-ში</h1>
+    <p class="text-slate-400 text-sm mb-8">Example 1 · TBC Tech School · Lecture 5</p>
+
+    <!-- var -->
+    <div class="bg-slate-800 border-l-4 border-yellow-400 rounded-xl p-5 mb-4">
+      <div class="flex items-center gap-2 mb-2">
+        <span class="bg-yellow-400 text-slate-900 text-xs font-bold px-2 py-0.5 rounded">var</span>
+        <h3 class="text-yellow-300 font-semibold">— ძველი გზა (მოერიდე!)</h3>
+      </div>
+      <p class="text-slate-400 text-sm mb-2">შეიძლება ხელახლა გამოცხადება. ხილული მთელ ფუნქციაში.</p>
+      <code class="text-yellow-300 font-mono text-sm bg-slate-900 px-2 py-1 rounded">var age = 25;</code>
+    </div>
+
+    <!-- let -->
+    <div class="bg-slate-800 border-l-4 border-violet-400 rounded-xl p-5 mb-4">
+      <div class="flex items-center gap-2 mb-2">
+        <span class="bg-violet-500 text-white text-xs font-bold px-2 py-0.5 rounded">let</span>
+        <h3 class="text-violet-300 font-semibold">— თანამედროვე, ცვლადი მნიშვნელობა</h3>
+      </div>
+      <p class="text-slate-400 text-sm mb-2">მნიშვნელობა შეიძლება შეიცვალოს. ხილული ბლოკში.</p>
+      <code class="text-yellow-300 font-mono text-sm bg-slate-900 px-2 py-1 rounded">let score = 0;</code>
+    </div>
+
+    <!-- const -->
+    <div class="bg-slate-800 border-l-4 border-emerald-400 rounded-xl p-5 mb-6">
+      <div class="flex items-center gap-2 mb-2">
+        <span class="bg-emerald-500 text-white text-xs font-bold px-2 py-0.5 rounded">const</span>
+        <h3 class="text-emerald-300 font-semibold">— მუდმივი, არ იცვლება</h3>
+      </div>
+      <p class="text-slate-400 text-sm mb-2">მნიშვნელობა ერთხელ ენიჭება და არ იცვლება.</p>
+      <code class="text-yellow-300 font-mono text-sm bg-slate-900 px-2 py-1 rounded">const PI = 3.14;</code>
+    </div>
+
+    <!-- output -->
+    <div class="bg-slate-950 border border-slate-700 rounded-xl p-5">
+      <p class="text-slate-500 text-sm mb-3">🖥️ Console Output:</p>
+      <div id="output" class="font-mono text-sm text-emerald-400 space-y-1"></div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+

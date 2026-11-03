@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Example 6 – Event Listeners</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-900 text-slate-200 min-h-screen p-6">
+
+  <h1 class="text-3xl font-bold text-yellow-400 text-center mb-1">🎪 Event Listeners</h1>
+  <p class="text-slate-400 text-sm text-center mb-10">Example 6 · TBC Tech School · Lecture 5</p>
+
+  <div class="max-w-3xl mx-auto space-y-5">
+
+    <!-- DEMO 1 – click -->
+    <div class="bg-slate-800 border border-slate-700 rounded-2xl p-6">
+      <h3 class="text-yellow-300 font-semibold mb-1">1. click Event</h3>
+      <p class="text-slate-400 text-sm mb-4">ყველაზე გავრცელებული ივენთი. ეხება ღილაკს ან ნებისმიერ ელემენტს.</p>
+      <div class="bg-slate-950 border border-dashed border-slate-600 rounded-xl p-4">
+        <button id="click-btn" class="bg-yellow-500 hover:bg-yellow-600 text-slate-900 font-bold text-base px-6 py-3 rounded-xl transition mb-4">
+          🖱️ დამაჭირე! (0 ჯერ)
+        </button>
+        <div id="click-log" class="bg-slate-900 border border-slate-700 rounded-lg p-3 font-mono text-sm text-emerald-400 whitespace-pre-wrap">ელოდება დაჭერას...</div>
+      </div>
+    </div>
+
+    <!-- DEMO 2 – keyboard -->
+    <div class="bg-slate-800 border border-slate-700 rounded-2xl p-6">
+      <h3 class="text-yellow-300 font-semibold mb-1">2. keydown / keyup Events</h3>
+      <p class="text-slate-400 text-sm mb-4">კლავიატურის ღილაკების დაჭერა. <code class="text-sky-400">event.key</code> გვეუბნება რომელი.</p>
+      <div class="bg-slate-950 border border-dashed border-slate-600 rounded-xl p-4">
+        <input id="key-input" type="text" placeholder="ტაიპი აქ და ნახე event-ები..."
+          class="w-full bg-slate-800 border-2 border-slate-600 focus:border-yellow-400 outline-none rounded-lg px-4 py-3 text-base mb-4 transition" />
+        <div id="key-log" class="bg-slate-900 border border-slate-700 rounded-lg p-3 font-mono text-sm text-emerald-400 whitespace-pre-wrap">ელოდება ღილაკის დაჭერას...</div>
+      </div>
+    </div>
+
+    <!-- DEMO 3 – mouse -->
+    <div class="bg-slate-800 border border-slate-700 rounded-2xl p-6">
+      <h3 class="text-yellow-300 font-semibold mb-1">3. mouseover / mouseout / mousedown</h3>
+      <p class="text-slate-400 text-sm mb-4">მაუსის ივენთები: hover, click-down, click-up...</p>
+      <div class="bg-slate-950 border border-dashed border-slate-600 rounded-xl p-4 flex gap-4 flex-wrap">
+        <div id="hover-box"
+          class="w-40 h-40 bg-slate-800 border-2 border-sky-500 rounded-xl flex items-center justify-center text-4xl cursor-pointer select-none transition-all duration-200 flex-shrink-0">
+          👆
+        </div>
+        <div id="mouse-log" class="flex-1 min-w-48 bg-slate-900 border border-slate-700 rounded-lg p-3 font-mono text-xs text-emerald-400 whitespace-pre-wrap overflow-y-auto max-h-44">
+          მაუსი ყუთზე მიიტანე...
+        </div>
+      </div>
+    </div>
+
+    <!-- DEMO 4 – form submit -->
+    <div class="bg-slate-800 border border-slate-700 rounded-2xl p-6">
+      <h3 class="text-yellow-300 font-semibold mb-1">4. submit Event</h3>
+      <p class="text-slate-400 text-sm mb-4"><code class="text-sky-400">event.preventDefault()</code> — ბრაუზერის ნაგულისხმევი ქმედების გაუქმება.</p>
+      <div class="bg-slate-950 border border-dashed border-slate-600 rounded-xl p-4">
+        <form id="reg-form" class="space-y-3 mb-4">
+          <div>
+            <label class="block text-slate-400 text-sm mb-1">სახელი</label>
+            <input id="f-name" type="text" placeholder="შეიყვანე სახელი" required
+              class="w-full bg-slate-800 border-2 border-slate-600 focus:border-yellow-400 outline-none rounded-lg px-4 py-2 text-sm transition" />
+          </div>
+          <div>
+            <label class="block text-slate-400 text-sm mb-1">ელ-ფოსტა</label>
+            <input id="f-email" type="email" placeholder="example@mail.com" required
+              class="w-full bg-slate-800 border-2 border-slate-600 focus:border-yellow-400 outline-none rounded-lg px-4 py-2 text-sm transition" />
+          </div>
+          <button type="submit" class="bg-yellow-500 hover:bg-yellow-600 text-slate-900 font-bold px-5 py-2 rounded-lg transition">✅ რეგისტრაცია</button>
+        </form>
+        <div id="form-output" class="hidden bg-slate-900 border border-emerald-700 rounded-lg p-4 text-sm text-emerald-300"></div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
