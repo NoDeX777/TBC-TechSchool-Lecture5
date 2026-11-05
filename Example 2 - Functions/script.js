@@ -5,14 +5,14 @@ function greet(name) {
 document.getElementById("r1").textContent = greet("გიორგი");
 
 // 2. Function Expression
-const add = function(a, b) {
+const add = function (a, b) {
   return a + b;
 };
 document.getElementById("r2").textContent = "5 + 7 = " + add(5, 7);
 
 // 3. Arrow Functions
 const multiply = (a, b) => a * b;
-const square   = n => n * n;
+const square = n => n * n;
 document.getElementById("r3").textContent =
   `4 × 6 = ${multiply(4, 6)}  |  5² = ${square(5)}`;
 
@@ -32,7 +32,11 @@ document.getElementById("r5").textContent =
 
 // 6. Template Literals
 const personName = "ნინო";
-const personAge  = 17;
+const personAge = 17;
 document.getElementById("r6").textContent =
   `სახელი: ${personName}, ასაკი: ${personAge}`;
-
+function nameAndAge(name, age) {
+  document.getElementById("r6").textContent =
+    `სახელი: ${name}, ასაკი: ${age}`;
+}
+nameAndAge(document.getElementById("name_input").value, 20);
