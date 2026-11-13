@@ -8,7 +8,6 @@ playerScore = 100;
 
 // ✅ const – block-scoped, არ იცვლება
 const appName = "TBC Tech School";
-
 // ❌ ეს გამოიწვევს შეცდომას:
 // appName = "სხვა"; // TypeError!
 
@@ -32,7 +31,7 @@ function log(label, value) {
   output.appendChild(div);
 }
 
-log("cityName", "kutaisi");
+log("cityName", cityName);
 log("playerScore", playerScore);
 log("appName", appName);
 log("myString", myString);
@@ -40,4 +39,4 @@ log("myNumber", myNumber);
 log("myBoolean", myBoolean);
 log("nothing", nothing);
 log("notDefined", notDefined);
-
+log("hi", "hou")

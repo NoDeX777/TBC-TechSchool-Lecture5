@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inspiration Hunter – AI-Generated Example</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen p-4 md:p-8 flex items-center justify-center">
+
+  <div class="w-full max-w-2xl bg-slate-900 border border-slate-800 rounded-3xl shadow-2xl p-6 md:p-10">
+
+    <!-- Header -->
+    <div class="text-center mb-8">
+      <div class="inline-flex items-center gap-2 bg-gradient-to-r from-amber-500/10 to-orange-500/10 border border-amber-500/20 px-3 py-1 rounded-full text-xs text-amber-400 font-semibold mb-3">
+        <span>✨</span> AI-ით დაგენერირებული ნიმუში (Example Project)
+      </div>
+      <h1 class="text-3xl md:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-500 mb-2">
+        Daily Inspiration Hunter 🏹
+      </h1>
+      <p class="text-slate-400 text-sm">მოიძიე მოტივაციური ციტატები API-დან და შეინახე შენი საყვარელი ფრაზები!</p>
+    </div>
+
+    <!-- Quote Card -->
+    <div class="relative bg-gradient-to-br from-slate-800/90 to-slate-900/90 border border-slate-700/80 rounded-2xl p-6 md:p-8 mb-6 shadow-xl overflow-hidden">
+      <!-- Decorative quote mark -->
+      <span class="absolute -top-4 -left-2 text-8xl text-slate-700/20 font-serif select-none pointer-events-none">“</span>
+
+      <div id="quote-container" class="relative z-10">
+        <p id="quote-text" class="text-lg md:text-xl font-medium text-slate-100 leading-relaxed mb-4 italic">
+          "დააჭირე ღილაკს და აღმოაჩინე ახალი ინსპირაცია..."
+        </p>
+        <div class="flex items-center justify-between">
+          <p id="quote-author" class="text-sm font-semibold text-amber-400">— TBC Tech School</p>
+          <span id="quote-category" class="bg-slate-800 text-slate-400 text-xs px-2.5 py-1 rounded-full border border-slate-700">Inspiration</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Actions -->
+    <div class="flex flex-wrap gap-3 justify-center mb-8">
+      <button 
+        id="new-quote-btn" 
+        class="bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 active:scale-95 text-slate-950 font-bold px-6 py-3 rounded-xl text-sm transition shadow-lg shadow-orange-500/20 flex items-center gap-2"
+      >
+        <span>🎲</span> ახალი ციტატა
+      </button>
+
+      <button 
+        id="save-quote-btn" 
+        class="bg-slate-800 hover:bg-slate-700 active:scale-95 text-slate-200 border border-slate-700 font-medium px-5 py-3 rounded-xl text-sm transition flex items-center gap-2"
+      >
+        <span>⭐</span> ფავორიტებში შენახვა
+      </button>
+    </div>
+
+    <!-- Favorites Section -->
+    <div class="border-t border-slate-800 pt-6">
+      <div class="flex items-center justify-between mb-4">
+        <h2 class="text-base font-bold text-slate-200 flex items-center gap-2">
+          <span>📚</span> შენახული ციტატები
+        </h2>
+        <span id="favorites-count" class="bg-amber-500/10 text-amber-400 text-xs font-semibold px-2.5 py-0.5 rounded-full border border-amber-500/20">
+          0 ციტატა
+        </span>
+      </div>
+
+      <ul id="favorites-list" class="space-y-3 max-h-60 overflow-y-auto pr-1">
+        <li id="empty-state" class="text-center py-6 text-slate-500 text-xs">
+          ჯერ არ გაქვს შენახული ციტატები. დააჭირე ⭐ "ფავორიტებში შენახვა"-ს!
+        </li>
+      </ul>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+

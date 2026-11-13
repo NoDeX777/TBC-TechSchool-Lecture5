@@ -2,7 +2,7 @@
 function greet(name) {
   return "გამარჯობა, " + name + "!";
 }
-document.getElementById("r1").textContent = greet("გიორგი");
+document.getElementById("r1").textContent = greet("nodari");;
 
 // 2. Function Expression
 const add = function (a, b) {
@@ -35,8 +35,3 @@ const personName = "ნინო";
 const personAge = 17;
 document.getElementById("r6").textContent =
   `სახელი: ${personName}, ასაკი: ${personAge}`;
-function nameAndAge(name, age) {
-  document.getElementById("r6").textContent =
-    `სახელი: ${name}, ასაკი: ${age}`;
-}
-nameAndAge(document.getElementById("name_input").value, 20);

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>დავალება 2 – შეცდომების გასწორება (Bug Fixing)</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen p-4 md:p-8 flex items-center justify-center">
+
+  <div class="w-full max-w-xl bg-slate-900 border border-slate-800 rounded-2xl shadow-2xl p-6 md:p-8">
+
+    <!-- Header -->
+    <div class="text-center mb-6">
+      <span class="inline-block bg-amber-500/10 text-amber-400 text-xs font-semibold px-3 py-1 rounded-full border border-amber-500/20 mb-2">
+        🐛 დავალება 2 (Debug & Fix)
+      </span>
+      <h1 class="text-2xl md:text-3xl font-bold text-white mb-2">🔍 დეტექტივი: გაასწორე შეცდომები</h1>
+      <p class="text-slate-400 text-sm">
+        ეს კოდი გაფუჭებულია! გახსენი <span class="text-amber-400 font-mono">F12 -> Console</span>, იპოვე 6 შეცდომა და აამუშავე.
+      </p>
+    </div>
+
+    <!-- Controls -->
+    <div class="flex gap-3 justify-center mb-6">
+      <button 
+        id="fetch-btn" 
+        class="bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-700 text-white font-medium px-5 py-2.5 rounded-xl text-sm transition shadow-lg shadow-indigo-600/30 flex items-center gap-2"
+      >
+        <span>📡</span> ახალი პოსტის წამოღება (API)
+      </button>
+    </div>
+
+    <!-- Post Card -->
+    <div id="post-card" class="bg-slate-800/80 border border-slate-700 rounded-xl p-5 mb-6">
+      <div class="flex items-center justify-between mb-3">
+        <span id="post-id" class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Post #1</span>
+        <span class="bg-slate-700/80 text-sky-400 text-xs px-2.5 py-0.5 rounded-full font-mono">JSONPlaceholder</span>
+      </div>
+
+      <h2 id="post-title" class="text-lg font-bold text-sky-300 mb-2">
+        დააჭირე ღილაკს პოსტის ჩასატვირთად...
+      </h2>
+
+      <p id="post-body" class="text-slate-400 text-sm leading-relaxed mb-4">
+        აქ გამოჩნდება პოსტის ტექსტი API-დან.
+      </p>
+
+      <!-- Tags list -->
+      <div id="tags-container" class="flex gap-2 flex-wrap mb-4">
+        <!-- JS-ით დაემატება ტეგები -->
+      </div>
+
+      <!-- Footer with Like button -->
+      <div class="border-t border-slate-700/60 pt-4 flex items-center justify-between">
+        <button 
+          id="like-btn" 
+          class="bg-rose-500/10 hover:bg-rose-500/20 text-rose-400 border border-rose-500/20 px-3.5 py-1.5 rounded-lg text-sm font-medium transition flex items-center gap-1.5"
+        >
+          <span>❤️</span> Like (<span id="likes-count">0</span>)
+        </button>
+        <span id="status-text" class="text-xs text-slate-500">მზადაა</span>
+      </div>
+    </div>
+
+    <!-- Mission Checklist -->
+    <div class="bg-slate-800/40 border border-slate-800 rounded-xl p-4">
+      <h3 class="text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">📋 შენი მიზნები:</h3>
+      <ul class="text-xs text-slate-400 space-y-1.5 list-disc list-inside">
+        <li>ღილაკზე "ახალი პოსტის წამოღება" დაჭერისას API-დან ჩამოვიდეს რეალური პოსტი.</li>
+        <li>პოსტის სათაური და შინაარსი სწორად ჩაიწეროს ბარათში.</li>
+        <li>ტეგები გამოჩნდეს დიდი ასოებით (UPPERCASE).</li>
+        <li>ღილაკზე "Like" ყოველ დაჭერაზე მთვლელი გაიზარდოს 1-ით.</li>
+        <li>კონსოლში (<code class="text-amber-300">F12</code>) აღარ იყოს არცერთი წითელი შეცდომა!</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+

@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="ka">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Example 3 – მასივები</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body class="bg-slate-900 text-slate-200 min-h-screen p-6">
 
   <h1 class="text-3xl font-bold text-orange-400 text-center mb-1">🗂️ მასივები JavaScript-ში</h1>
@@ -21,7 +23,9 @@
       <pre class="bg-slate-950 rounded-lg p-3 text-yellow-300 font-mono text-xs overflow-x-auto mb-3">const fruits = ["ვაშლი", "ბანანი", "მანდარინი", "ყურძენი"];
 fruits[0];       // "ვაშლი"
 fruits.length;   // 4</pre>
-      <div id="r1" class="bg-slate-950 border border-slate-700 rounded-lg p-3 font-mono text-sm text-emerald-400 whitespace-pre-wrap"></div>
+      <div id="r1"
+        class="bg-slate-950 border border-slate-700 rounded-lg p-3 font-mono text-sm text-emerald-400 whitespace-pre-wrap">
+      </div>
     </div>
 
     <!-- 2 -->
@@ -33,7 +37,9 @@ fruits.length;   // 4</pre>
 fruits.pop();              // ბოლოს წაშლა
 fruits.unshift("ლიმონი"); // დასაწყისში დამატება
 fruits.shift();            // დასაწყისიდან წაშლა</pre>
-      <div id="r2" class="bg-slate-950 border border-slate-700 rounded-lg p-3 font-mono text-sm text-emerald-400 whitespace-pre-wrap"></div>
+      <div id="r2"
+        class="bg-slate-950 border border-slate-700 rounded-lg p-3 font-mono text-sm text-emerald-400 whitespace-pre-wrap">
+      </div>
     </div>
 
     <!-- 3 -->
@@ -45,7 +51,9 @@ fruits.shift();            // დასაწყისიდან წაშლ�
 numbers.forEach(num => {
   console.log("რიცხვი:", num);
 });</pre>
-      <div id="r3" class="bg-slate-950 border border-slate-700 rounded-lg p-3 font-mono text-sm text-emerald-400 whitespace-pre-wrap"></div>
+      <div id="r3"
+        class="bg-slate-950 border border-slate-700 rounded-lg p-3 font-mono text-sm text-emerald-400 whitespace-pre-wrap">
+      </div>
     </div>
 
     <!-- 4 -->
@@ -55,7 +63,9 @@ numbers.forEach(num => {
       <p class="text-slate-400 text-sm mb-3">ქმნის ახალ მასივს, სადაც ყოველი ელემენტი გარდაქმნილია.</p>
       <pre class="bg-slate-950 rounded-lg p-3 text-yellow-300 font-mono text-xs overflow-x-auto mb-3">const doubled = numbers.map(n => n * 2);
 // [2, 4, 6, 8, 10]</pre>
-      <div id="r4" class="bg-slate-950 border border-slate-700 rounded-lg p-3 font-mono text-sm text-emerald-400 whitespace-pre-wrap"></div>
+      <div id="r4"
+        class="bg-slate-950 border border-slate-700 rounded-lg p-3 font-mono text-sm text-emerald-400 whitespace-pre-wrap">
+      </div>
     </div>
 
     <!-- 5 -->
@@ -66,24 +76,29 @@ numbers.forEach(num => {
       <pre class="bg-slate-950 rounded-lg p-3 text-yellow-300 font-mono text-xs overflow-x-auto mb-3">const scores = [45, 82, 60, 91, 38, 75];
 const passed = scores.filter(s => s >= 60);
 // [82, 60, 91, 75]</pre>
-      <div id="r5" class="bg-slate-950 border border-slate-700 rounded-lg p-3 font-mono text-sm text-emerald-400 whitespace-pre-wrap"></div>
+      <div id="r5"
+        class="bg-slate-950 border border-slate-700 rounded-lg p-3 font-mono text-sm text-emerald-400 whitespace-pre-wrap">
+      </div>
     </div>
 
     <!-- 6 -->
     <div class="bg-slate-800 border border-slate-700 rounded-2xl p-6">
-      <span class="bg-orange-500 text-white text-xs font-bold px-2 py-0.5 rounded mb-3 inline-block">FIND & INCLUDES</span>
+      <span class="bg-orange-500 text-white text-xs font-bold px-2 py-0.5 rounded mb-3 inline-block">FIND &
+        INCLUDES</span>
       <h3 class="text-orange-300 font-semibold mb-2">find / includes / indexOf</h3>
       <p class="text-slate-400 text-sm mb-3">ელემენტის ძიება მასივში.</p>
       <pre class="bg-slate-950 rounded-lg p-3 text-yellow-300 font-mono text-xs overflow-x-auto mb-3">const students = ["ანა", "გიორგი", "ნინო", "დავით"];
 students.includes("ნინო");             // true
 students.indexOf("გიორგი");           // 1
 students.find(s => s.startsWith("დ")); // "დავით"</pre>
-      <div id="r6" class="bg-slate-950 border border-slate-700 rounded-lg p-3 font-mono text-sm text-emerald-400 whitespace-pre-wrap"></div>
+      <div id="r6"
+        class="bg-slate-950 border border-slate-700 rounded-lg p-3 font-mono text-sm text-emerald-400 whitespace-pre-wrap">
+      </div>
     </div>
 
   </div>
 
   <script src="script.js"></script>
 </body>
-</html>
 
+</html>
